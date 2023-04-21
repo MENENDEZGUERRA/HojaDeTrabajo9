@@ -15,13 +15,18 @@ public class Dictionary {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
             while ((line = br.readLine()) != null) {
-                StringTokenizer st = new StringTokenizer(line, "\t");
-                String englishWord = st.nextToken().toLowerCase();
-                String spanishWord = st.nextToken().toLowerCase();
-                map.put(englishWord, spanishWord);
+                StringTokenizer st = new StringTokenizer(line, " ");
+                while (st.hasMoreTokens()) {
+                    String key = st.nextToken().toLowerCase();
+                    if (st.hasMoreTokens()) {
+                        String value = st.nextToken().toLowerCase();
+                        map.put(key, value);
+                    }
+                }
             }
         }
     }
+    
 
     public String translate(String word) {
         String translatedWord = map.get(word.toLowerCase());
