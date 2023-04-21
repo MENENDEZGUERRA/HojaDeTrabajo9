@@ -63,5 +63,6 @@ public class Main {
 
         System.out.println("Texto traducido:");
         System.out.println(translatedText);
+        System.out.println("Traducción Finalizada");
     }
 }
