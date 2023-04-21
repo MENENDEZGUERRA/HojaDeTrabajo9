@@ -1,0 +1,12 @@
+house casa
+dog perro
+cat gato
+homework tarea
+town pueblo
+woman mujer
+man hombre
+car coche
+computer computadora
+city ciudad
+school escuela
+food comida
